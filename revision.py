@@ -44,7 +44,7 @@ def q2_7():
 # a라는 변수에 'hello world'라는 문자열이 바인딩돼 있다고 했을 때 a의 값을 'hi world'로 변경해 보세요
 def q2_8():
     a = "hello world"
-    a=a.replace("hello", "hi")
+    a = a.replace("hello", "hi")
     return a
 
 # x라는 변수에 'abcdef'라는 문자열이 바인딩돼 있다고 했을 때 x의 값을 'bcdefa'로 변경해 보세요.
