@@ -42,16 +42,23 @@ def q3_4(naverClosingPrice):
 
 # 문제 3-1에서 만든 naver_closing_price를 이용해 수요일의 종가를 화면에 출력하세요.
 def q3_5(naverClosingPrice):
-    return None
+    print('q3_5 result: ', list(filter(lambda obj: obj['week'] == '수', naverClosingPrice))[0]['price'])
 
 # 문제 3-1의 표 3.2를 이용해 날짜를 딕셔너리의 키 값으로,
 # 종가를 딕셔너리의 값으로 사용해 naver_closing_price2라는 딕셔너리를 만드세요.
 def q3_6(naverClosingPrice):
-    return None
+    list = []
+    for obj in naverClosingPrice:
+        obj2 = {obj['date'] : obj['price']}
+        list.append(obj2)
+    return list
 
 # 문제 3-6에서 만든 naver_closing_price2 딕셔너리를 이용해 09/09일의 종가를 출력하세요.
-def q3_7():
-    return None
+def q3_7(naverClosingPrice2):
+    for obj in naverClosingPrice2:
+        for key, value in obj.items():
+            if key == '09/09':
+                print('q3_7 result: ', value)
 
 
 if __name__ == '__main__':
@@ -60,4 +67,7 @@ if __name__ == '__main__':
     q3_2(naverClosingPrice)
     q3_3(naverClosingPrice)
     q3_4(naverClosingPrice)
-
+    q3_5(naverClosingPrice)
+    naverClosingPrice2 = q3_6(naverClosingPrice)
+    print('q3_6 result', naverClosingPrice2)
+    q3_7(naverClosingPrice2)
